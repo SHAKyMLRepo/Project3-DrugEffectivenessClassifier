@@ -27,18 +27,21 @@ The Drug Prescription Prediction project employs Decision Trees to analyze a dat
 <br>
 
 ![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/fe806f98-012c-4c0a-8948-89eaac6fb491)
+<br>
 *Figure 1. Bar Chart showing frequency of Ages within Dataset*
 <br>
 
 ![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/5057a946-b077-4feb-9755-973dad340d55)
+<br>
 *Figure 2. Bar Chart showing frequency of Drugs prescribed within Dataset*
 <br>
 
 ![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/62c038e2-90e6-481f-950f-8948f5fbd268)
+<br>
 *Figure 3. Bars chart showing split between Gender in dataset*
 <br>
 
-![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/f9639186-42f0-42f3-b9e5-6a0ef44793c3)
+![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/f9639186-42f0-42f3-b9e5-6a0ef44793c3)<br>
 *Figure 4. Scatterplot of dependent varible and independent variables showing 4 clusters*
 <br>
 
