@@ -1,6 +1,6 @@
 # Project: Drug Prescription Prediction using Decision Trees
 
-
+![DecisionTree](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/3060f55b-8812-4576-b485-ab70d230a5ca)
 
 ## Introduction
 
