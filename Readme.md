@@ -1,5 +1,7 @@
 # Project: Drug Prescription Prediction using Decision Trees
 
+![DecisionTree](Images/decisiontree.png)
+
 ## Introduction
 
 The Drug Prescription Prediction project employs Decision Trees to analyze a dataset of drug prescriptions. The primary objective is to leverage machine learning to predict the most suitable drug for a patient based on various health and personal characteristics, such as gender, age, blood pressure, and other relevant factors. This project holds significant implications for personalized medicine and optimizing drug prescription practices.
@@ -25,19 +27,19 @@ The Drug Prescription Prediction project employs Decision Trees to analyze a dat
 <br>
 
 <br>
-*Figure 1. Bar Chart showing ratio of pictures classified as with and without masks*
+*Figure 1. Bar Chart showing frequency of Ages within Dataset*
 <br>
 
 <br>
-*Figure 2. Sample image from dataset*
+*Figure 2. Bar Chart showing frequency of Drugs prescribed within Dataset*
 <br>
 
 <br>
-*Figure 3. Image Size Properties (width,height) for with mask images*
+*Figure 3. Bars chart showing split between Gender in dataset*
 <br>
 
 <br>
-*Figure 4. Image Size Properties width,height) for without mask images*
+*Figure 4. Scatterplot of dependent varible and independent variables showing 4 clusters*
 <br>
 
 ### Data Preprocessing
@@ -46,9 +48,20 @@ The Drug Prescription Prediction project employs Decision Trees to analyze a dat
 As the dataset arrived cleaned and structured, initial tasks in the preprocessing stage involved Data Exploration and Data Visualization. The dataset structure was explored to confirm its suitability, and visualizations were prepared to gain insights into its contents. After confirming the dataset's quality, checks for missing values were performed. Dependent and independent variables were identified, and the data was transformed into a feature vector and a target value. These sets were then split into training and test sets for subsequent model evaluation.
 
 #### Steps
-**Step 1**
--
-
+**Data Cleaning**
+- Dataset is checked for null values to ensure that the machine learning algorithm can be implemented
+**Feature Vector Created**
+- The dependent variable is extracted to a numpy array y
+- The Feature vector numpy array is created from the independent variables
+```Python
+X = df.drop(['Drug'], axis=1)
+y = df['Drug'] #Dependent variable
+```
+**Trained and Test sets created**
+- A test set for model evalution is split at an 80/20 split
+```Python
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+```
 
 ### Model Development
 Implementation of a Decision Tree algorithm aimed to learn the relationships between patient characteristics and drug prescriptions. Fine-tuning of the model was conducted to achieve optimal performance in predicting drug choices.
