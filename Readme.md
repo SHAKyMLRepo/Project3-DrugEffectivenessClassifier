@@ -1,6 +1,6 @@
 # Project: Drug Prescription Prediction using Decision Trees
 
-![DecisionTree](Images/decisiontree.png)
+
 
 ## Introduction
 
