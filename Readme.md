@@ -77,7 +77,7 @@ df.isnull().sum()
 X = df.drop(['Drug'], axis=1)
 y = df['Drug'] #Dependent variable
 ```
-3. **Categorical data encoding
+3. **Categorical data encoding**
 - For the feature vector it consists of 3 categorical variables and 2 numerical variables
 - OneHotEncoding is used to transform the categorical variables to numerical
 ```Python
@@ -116,14 +116,21 @@ The aim of this project is to implement a Decision Tree algorithm which is capab
 tree = DecisionTreeClassifier().fit(X_train, y_train)
 y_pred = tree.predict(X_test)
 ```
-- The image below shows the class Regions that this Decision Tree defines
+- The image below shows the class Regions that this Decision Tree defines<br>
+
 ![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/9a045cd5-9b8f-4332-8837-f0204a96ae32)
+<br>
+*Figure 1. Clusters that a simple decision tree creates*
 2. **Result**
 - This model perform fairly well with an overall accuracy of 88%.
 - The F1 metric shows model has perfect performance for classes 1 and 4.
 - Class 0 has the lowest precision so fine tuning may be required
 - However the size of the dataset may mean that different combinations of training data could yield different results, to check the next step is to shuffle the data and see how it effects performance
+<br>
+
 ![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/f9a046dd-e02a-4674-b015-b67889a7b6f9)
+<br>
+*Figure 2. Accuracy, Recall, f1-score metrics for simple Decision tree*
 3. **Shuffling Data and trying again**
 - The next step is to shuffle the training and test data and evaluating how it effects the model performance
 ```Python
@@ -138,18 +145,28 @@ print(metrics.classification_report(y_pred, y_test))
 - I think this shows the dangers of small datasets especially with the large disparity in the frequency of the classes.
 - This set of training yields an overall accuracy of 96%, which is a good result.
 - Class 0 still yields the worst performance this corresponds to drugA.
-- Class 4 has had perfect performance in both sets which may indicate that its high frequency is causing overfitting</p>
+- Class 4 has had perfect performance in both sets which may indicate that its high frequency is causing overfitting</p><br>
+
 ![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/91f9d9a1-2104-4e52-9dc1-7943bc785e70)
+<br>
+*Figure 3. Accuracy, Recall, f1-score metrics for simple Decision tree after reshuffling training and test data*
 
 4. **Bagging Classifier**
 - Next step was to try a Bagging Classifier
-- We can see from the graph that the regions have become much less uniform by using mulitple estimators using a subset of 80% of the training points
+- We can see from the graph that the regions have become much less uniform by using mulitple estimators using a subset of 80% of the training points<br>
+
 ![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/5cd47929-e3fe-420f-8d6c-c781bdf19524)
+<br>
+*Figure 4. Clusters that an ensemble Bagging Classifier yields*
+<br>
 - This method yielded 98% accuracy in the first test and 93% in the second test after reshuffling data
 - This test has shown that this ensemble method offers a much more stable result set with less overfitting of the data
-- Image below shows a heatmap representing the confusion matrix which shows only 3 incorrect predictions using this method
-![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/3a065676-c6e1-403b-91ac-f3375861cfc2)
+- Image below shows a heatmap representing the confusion matrix which shows only 3 incorrect predictions using this method<br>
 
+![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/3a065676-c6e1-403b-91ac-f3375861cfc2)
+<br>
+*Figure 5. HeatMap representation of the confusion matrix for the Bagging Classifier algorithm*
+<br>
 5. **Random Forest**
 - Next step was to try a Random Forest Classifier, this classifier allows you to set the number of estimators to be used and a random state to shuffle data
 ```Python
@@ -157,8 +174,12 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 print(metrics.classification_report(y_pred, y_test))
 ```
-- Image below showing how much more fine grained the class regions are defined across the dataset
+- Image below showing how much more fine grained the class regions are defined across the dataset<br>
+
 ![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/6aadf9da-72f6-4432-8a1a-6889b0f2be89)
+<br>
+*Figure 6. Clusters that a Random Forest Classifier yields*
+<br>
 - The first test yielded an accuracy score of 93% and the second test
 - More finetuning of this model will be developed in the next iteration
 
