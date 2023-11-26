@@ -10,6 +10,11 @@ The Drug Prescription Prediction project employs Decision Trees to analyze a dat
 
 **Objective**: The main goal is to develop a Decision Tree model capable of accurately predicting the most appropriate drug for a patient based on their health and personal characteristics.
 
+## Google Colab
+If you are interesting in taking a closer look at the code and some more detailed explanation, please feel free to click the Google Colab below to explore the code.<br>
+
+[Drug Prescription Classifier](https://colab.research.google.com/drive/1HCkHKErMyWpaQoVs00sJiqlb_GQ1ZolD?usp=sharing)
+
 ## Key Components
 
 ### Data Sourcing
