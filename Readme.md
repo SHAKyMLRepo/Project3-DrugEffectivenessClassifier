@@ -36,6 +36,7 @@ The Drug Prescription Prediction project employs Decision Trees to analyze a dat
 #### Chart showing Drug Frequency
 <p>Chart showing the frequency of drug prescription. There is high variability across numbers of prescriptions which may mean that the model may vary depending on which data in included in the training data</p>
 <br>
+
 ![image](https://github.com/SHAKyMLRepo/Project3-DrugEffectivenessClassifier/assets/145592967/5057a946-b077-4feb-9755-973dad340d55)
 <br>
 *Figure 2. Bar Chart showing frequency of Drugs prescribed within Dataset*
